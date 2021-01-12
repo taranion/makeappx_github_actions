@@ -2,6 +2,7 @@ name: Compile Windows
 on: [push]
 env:
   LANG: "de_DE.UTF-8"
+  ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
 jobs:
   create-appx:
