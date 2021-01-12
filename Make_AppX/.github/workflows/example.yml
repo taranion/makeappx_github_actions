@@ -1,0 +1,22 @@
+name: Compile Windows
+on: [push]
+env:
+  LANG: "de_DE.UTF-8"
+
+jobs:
+  create-appx:
+    runs-on: windows-latest
+    steps:
+    - name: checkout sources
+      uses: actions/checkout@v1
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.1
+    - name: Foo 
+      uses: ilammy/msvc-dev-cmd@v1
+
+    - name: Test if 'cl' is working
+      run: cl
+          
+    - name: MakeAPPX
+      run: makeappx.exe pack /d PackageFiles /p Mondtor.appx /o /v /l
+      
