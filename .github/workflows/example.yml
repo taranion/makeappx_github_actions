@@ -20,4 +20,7 @@ jobs:
           
     - name: MakeAPPX
       run: makeappx.exe pack /d PackageFiles /p Mondtor.appx /o /v /l
+          
+    - name: Results
+      run: dir
       
