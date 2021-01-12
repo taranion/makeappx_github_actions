@@ -23,4 +23,15 @@ jobs:
           
     - name: Results
       run: dir
-      
+
+    - name: Make staging directory
+      run: mkdir staging
+
+    - name: Copy native client to staging
+      run: cp -Mondtor.exe staging   
+   
+    - name: Upload
+      uses: actions/upload-artifact@v2
+      with:
+        name: Package
+        path: staging      
