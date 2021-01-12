@@ -28,7 +28,7 @@ jobs:
       run: mkdir staging
 
     - name: Copy native client to staging
-      run: cp -Mondtor.exe staging   
+      run: cp Mondtor.appx staging   
    
     - name: Upload
       uses: actions/upload-artifact@v2
