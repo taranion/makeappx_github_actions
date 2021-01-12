@@ -25,7 +25,7 @@ jobs:
       run: dir
 
     - name: Sign
-      run: signtool.exe" sign /a /fd SHA256 /f auto-generated.pfx /p 123456  Mondtor.appx
+      run: signtool.exe sign /a /fd SHA256 /f auto-generated.pfx /p 123456  Mondtor.appx
           
     - name: Results
       run: dir
